@@ -1,10 +1,11 @@
-import { createServer } from 'http';
+import http from 'http';
+
 const PORT = 4000;
 
-const server = createServer((req, res) => {
-    res.end('<h1>Hello</h1>')
+const server = http.createServer((req, res) => {
+    res.end('Hello node...');
 });
 
 server.listen(PORT, () => {
-    console.log(`Server started at port ${ PORT }`);
+    console.log(`Server running on port ${ PORT }`);
 })
